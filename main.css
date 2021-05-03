@@ -1,0 +1,53 @@
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    border: white;
+  }
+
+  .grid { 
+    width: 90%; 
+    height: 300px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 60px auto; 
+    } 
+    
+    .grid img { 
+    display:flex;  
+    margin: 2px; 
+    transform-style: preserve-3d; 
+    transition: transform 0.5s; 
+    } 
+    .audio{
+      display:none
+    }
+    .grid img.flip { 
+    transform: rotateY(180deg); 
+    } 
+    
+    .popup { 
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: 20px;  
+    }
+    
+    .data { 
+    position: absolute;
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 30px; 
+    font-size: 23px; 
+    } 
+    
+    .data span { 
+    position: absolute;
+    color: rgb(144, 11, 206);
+    font-size: 30px; 
+    }
