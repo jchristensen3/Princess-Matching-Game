@@ -4,25 +4,25 @@ let cardArray = [
     { name: "cinderella", img: , },
     { name: "cinderella", img: , }, 
     { name: "aurora", img: , },
-    { name: , img: , }, 
-    { name: , img: , },
-    { name: , img: , },
-    { name: , img: , },
-    { name: , img: , },
-    { name: , img: , },
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
-    { name: , img: , }, 
+    { name: "aurora", img: , }, 
+    { name: "ariel", img: , },
+    { name: "ariel", img: , },
+    { name: "belle", img: , },
+    { name: "belle", img: , },
+    { name: "jasmine", img: , },
+    { name: "jasmine", img: , }, 
+    { name: "pocahontas", img: , }, 
+    { name: "pocahontas", img: , }, 
+    { name: "mulan", img: , }, 
+    { name: "mulan", img: , }, 
+    { name: "tiana", img: , }, 
+    { name: "tiana", img: , }, 
+    { name: "rapunzel", img: , }, 
+    { name: "rapunzel", img: , }, 
+    { name: "merida", img: , }, 
+    { name: "merida", img: , }, 
+    { name: "moana", img: , }, 
+    { name: "moana", img: , }, 
     ]; 
     
     //define variables and get DOM element
@@ -77,19 +77,11 @@ let cardArray = [
     let selected = this.dataset.id;
       let clicked =cardArray[selected].name
     cardsSelected.push(clicked); 
-      
+     
+    // Play sound
        source.src=`${clicked}.wav`
       audio.load()
       audio.play()
-      //this is the second method to play a sound
-      
-    //    let clicked =cardArray[selected].name
-    // cardsSelected.push(clicked); 
-    // let sound =new Audio(`./${clicked}.mp3`) 
-    // function playSound(sound){
-    // sound.play()
-    // }
-    // playSound(sound)
       
       
     cardsId.push(selected); 
@@ -107,8 +99,6 @@ let cardArray = [
     let secondCard = cardsId[1];
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
     alert("you have found a match"); 
-     // source.src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3"
-      //this below is used if you want to add sounds, you can comment it out if you dont want it
      
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
