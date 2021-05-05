@@ -1,28 +1,28 @@
 let cardArray = [ 
-    { name: "snowwhite", img: , }, 
-    { name: "snowwhite", img: , },
-    { name: "cinderella", img: , },
-    { name: "cinderella", img: , }, 
-    { name: "aurora", img: , },
-    { name: "aurora", img: , }, 
-    { name: "ariel", img: , },
-    { name: "ariel", img: , },
-    { name: "belle", img: , },
-    { name: "belle", img: , },
-    { name: "jasmine", img: , },
-    { name: "jasmine", img: , }, 
-    { name: "pocahontas", img: , }, 
-    { name: "pocahontas", img: , }, 
-    { name: "mulan", img: , }, 
-    { name: "mulan", img: , }, 
-    { name: "tiana", img: , }, 
-    { name: "tiana", img: , }, 
-    { name: "rapunzel", img: , }, 
-    { name: "rapunzel", img: , }, 
-    { name: "merida", img: , }, 
-    { name: "merida", img: , }, 
-    { name: "moana", img: , }, 
-    { name: "moana", img: , }, 
+    { name: "snowwhite", img: "snowwhite.PNG", }, 
+    { name: "snowwhite", img: "snowwhite.PNG", },
+    { name: "cinderella", img: "cinderella.PNG", },
+    { name: "cinderella", img: "cinderella.PNG", }, 
+    { name: "aurora", img: "aurora.PNG", },
+    { name: "aurora", img: "aurora.PNG", }, 
+    { name: "ariel", img: "ariel.PNG", },
+    { name: "ariel", img: "ariel.PNG", },
+    { name: "belle", img: "belle.PNG", },
+    { name: "belle", img: "belle.PNG", },
+    { name: "jasmine", img: "jasmine.PNG", },
+    { name: "jasmine", img: "jasmine.PNG", }, 
+    { name: "pocahontas", img: "pocahontas.PNG", }, 
+    { name: "pocahontas", img: "pocahontas.PNG", }, 
+    { name: "mulan", img: "mulan.PNG", }, 
+    { name: "mulan", img: "mulan.PNG", }, 
+    { name: "tiana", img: "tiana.PNG", }, 
+    { name: "tiana", img: "tiana.PNG", }, 
+    { name: "rapunzel", img: "rapunzel.PNG", }, 
+    { name: "rapunzel", img: "rapunzel.PNG", }, 
+    { name: "merida", img: "merida.PNG", }, 
+    { name: "merida", img: "merida.PNG", }, 
+    { name: "moana", img: "moana.PNG", }, 
+    { name: "moana", img: "moana.PNG", }, 
     ]; 
     
     //define variables and get DOM element
@@ -80,7 +80,6 @@ let cardArray = [
      
     // Play sound
        source.src=`${clicked}.wav`
-      audio.load()
       audio.play()
       
       
@@ -99,17 +98,17 @@ let cardArray = [
     let secondCard = cardsId[1];
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
     alert("you have found a match"); 
-     
+    source.src="click.wav"
+    audio.load()
+    audio.play()
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
     setTimeout(checkWon,500) 
     } else { 
-    imgs[firstCard].setAttribute("src", "princess cards.PNG");
+    imgs[firstCard].setAttribute("src","princess cards.PNG" );
     imgs[secondCard].setAttribute("src", "princess cards.PNG"); alert("wrong, please try again"); 
-      source.src="click.wav"
-      audio.load()
-      audio.play()
-      imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip"); 
+    imgs[firstCard].classList.remove("flip");
+    imgs[secondCard].classList.remove("flip"); 
     } 
     cardsSelected = []; 
     cardsId = []; 

@@ -8,11 +8,13 @@
   }
 
   .grid { 
+    padding-top: 100px;
     width: 90%; 
-    height: 300px; 
-    display: flex; 
+    height: 200px; 
+    display:flex; 
     flex-wrap: wrap; 
     margin: 60px auto; 
+
     } 
     
     .grid img { 
@@ -24,9 +26,9 @@
     .audio{
       display:none
     }
-    .grid img.flip { 
-    transform: rotateY(180deg); 
-    } 
+    /* .grid img.flip { 
+      transform: scaleX(-1);
+    }  */
     
     .popup { 
         position: fixed;
@@ -40,7 +42,6 @@
     
     .data { 
     position: absolute;
-    display: flex; 
     justify-content: space-between; 
     padding: 20px 30px; 
     font-size: 23px; 
