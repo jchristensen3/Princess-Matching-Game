@@ -27,7 +27,7 @@ let cardArray = [
     
     //define variables and get DOM element
     
-    let grid = document.querySelector(".grid");
+    let gameBoard= document.querySelector(".gameBoard");
     let audio = document.querySelector("audio")
     let source = document.querySelector("#source")
     let scoreBoard = document.querySelector(".scoreBoard"); 
@@ -42,7 +42,7 @@ let cardArray = [
     document.addEventListener("DOMContentLoaded", function () {
     //define functions 
     
-    createBoard(grid, cardArray); 
+    createBoard(gameBoard, cardArray); 
     arrangeCard();
     playAgain.addEventListener("click", replay); 
     
@@ -55,20 +55,20 @@ let cardArray = [
     });
     //createBoard function
     
-    function createBoard(grid, array) { 
+    function createBoard(gameBoard, array) { 
     popup.style.display = "none"; 
     array.forEach((arr, index) => { 
     let img = document.createElement("img"); 
     img.setAttribute("src", "princess cards.PNG");
     img.setAttribute("data-id", index); 
-    grid.appendChild(img); 
+    gameBoard.appendChild(img); 
     })
     }
     
     // arrangeCard function
     
     function arrangeCard() { 
-    cardArray.sort(() => 0.5 - Math.random())
+    cardArray.sort(() => 0.2 - Math.random())
     }
     
     // flip Card function
@@ -87,28 +87,39 @@ let cardArray = [
     this.classList.add("flip"); 
     this.setAttribute("src", cardArray[selected].img); 
     if (cardsId.length === 2) { 
-    setTimeout(checkForMatch, 500);
+    setTimeout(checkForMatch, 6000);
     } 
     }
     // checkForMatch function
-    
+ 
     function checkForMatch() { 
-    let imgs = document.querySelectorAll("img"); 
+    let imgs = document.querySelectorAll(".gameBoard img"); 
     let firstCard = cardsId[0];
     let secondCard = cardsId[1];
+    console.log(firstCard)
+    console.log(secondCard)
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
-    alert("you have found a match"); 
-     
+    alert("Good Job, you got a match!"); 
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,500) 
-    } else { 
+    setTimeout(checkWon,5000) 
+    } 
+    else { 
+      console.log(imgs)
+    imgs[secondCard].setAttribute("src", "princess cards.PNG"); 
     imgs[firstCard].setAttribute("src", "princess cards.PNG");
-    imgs[secondCard].setAttribute("src", "princess cards.PNG"); alert("wrong, please try again"); 
-      source.src="click.wav"
-      audio.load()
-      audio.play()
-      imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip"); 
+   
+    alert("Sorry, try again."); 
+     
+    imgs[firstCard].classList.remove("flip"); 
+    imgs[secondCard].classList.remove("flip");
+  
+    
+    
+    source.src="click.wav"
+    audio.load()
+    audio.play()
+     
     } 
     cardsSelected = []; 
     cardsId = []; 
@@ -126,8 +137,8 @@ let cardArray = [
     
     function replay() { 
     arrangeCard(); 
-    grid.innerHTML = "";
-    createBoard(grid, cardArray);
+    gameBoard.innerHTML = "";
+    createBoard(gameBoard, cardArray);
     cardsWon = 0;
     clicks = 0; 
     clickBoard.innerHTML = 0; 
