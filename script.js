@@ -31,7 +31,7 @@ let cardArray = [
     let audio = document.querySelector("audio")
     let source = document.querySelector("#source")
     let scoreBoard = document.querySelector(".scoreBoard"); 
-    let popup = document.querySelector(".popup"); 
+    // let popup = document.querySelector(".popup"); 
     let playAgain = document.querySelector(".playAgain"); 
     let clickBoard = document.querySelector(".clickBoard"); 
     let imgs; 
@@ -40,23 +40,25 @@ let cardArray = [
     let cardsWon = 0; 
     let clicks = 0;
     document.addEventListener("DOMContentLoaded", function () {
-    //define functions 
-    
+
+    // Click replay popup
+
     createBoard(gameBoard, cardArray); 
     arrangeCard();
     playAgain.addEventListener("click", replay); 
     
-    //add a click functions for images 
+    // Click to flip card
     
     imgs = document.querySelectorAll("img");
     Array.from(imgs).forEach(img => 
     img.addEventListener("click", flipCard)
     ) 
     });
-    //createBoard function
+
+    // Game board
     
     function createBoard(gameBoard, array) { 
-    popup.style.display = "none"; 
+    // popup.style.display = "none"; 
     array.forEach((arr, index) => { 
     let img = document.createElement("img"); 
     img.setAttribute("src", "princess cards.PNG");
@@ -65,20 +67,20 @@ let cardArray = [
     })
     }
     
-    // arrangeCard function
+    // Shuffle Cards
     
     function arrangeCard() { 
     cardArray.sort(() => 0.2 - Math.random())
     }
     
-    // flip Card function
+    // flip Cards
     
     function flipCard() { 
     let selected = this.dataset.id;
       let clicked =cardArray[selected].name
     cardsSelected.push(clicked); 
      
-    // Play sound
+    // Click Sound
        source.src=`${clicked}.wav`
       audio.play()
       
@@ -87,10 +89,10 @@ let cardArray = [
     this.classList.add("flip"); 
     this.setAttribute("src", cardArray[selected].img); 
     if (cardsId.length === 2) { 
-    setTimeout(checkForMatch, 3000);
+    setTimeout(checkForMatch, 5000);
     } 
     }
-    // checkForMatch function
+    // Check for match
  
     function checkForMatch() { 
     let imgs = document.querySelectorAll(".gameBoard img"); 
@@ -102,23 +104,21 @@ let cardArray = [
     alert("Good Job, you got a match!"); 
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,3000) 
+    setTimeout(checkWon,4000) 
+    source.src="click.wav"
+    audio.load()
+    audio.play()
     } 
     else { 
-      console.log(imgs)
-    imgs[secondCard].setAttribute("src", "princess cards.PNG"); 
+    console.log(imgs)
     imgs[firstCard].setAttribute("src", "princess cards.PNG");
-   
-    alert("Sorry, try again."); 
-     
+    imgs[secondCard].setAttribute("src", "princess cards.PNG"); alert("Sorry, try again."); 
     imgs[firstCard].classList.remove("flip"); 
     imgs[secondCard].classList.remove("flip");
   
     
     
-    source.src="click.wav"
-    audio.load()
-    audio.play()
+    
      
     } 
     cardsSelected = []; 
@@ -130,7 +130,7 @@ let cardArray = [
     function checkWon() {
     if (cardsWon == cardArray.length / 2) {
     alert("You won") 
-    setTimeout(()=> popup.style.display = "flex" ,300); 
+    // setTimeout(()=> popup.style.display = "flex" ,300); 
     }
     }
     // The replay function
@@ -141,6 +141,7 @@ let cardArray = [
     createBoard(gameBoard, cardArray);
     cardsWon = 0;
     clicks = 0; 
+    window.location.reload();
     clickBoard.innerHTML = 0; 
     scoreBoard.innerHTML = 0; 
     popup.style.display = "none"; 
