@@ -6,20 +6,27 @@
     min-height: 100%;
     border: white;
   }
+  
+  h1 {
+    color:mediumvioletred;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
   .grid { 
     padding-top: 100px;
-    width: 90%; 
-    height: 200px; 
-    display:flex; 
+    width: 100%;
+    display: flex; 
     flex-wrap: wrap; 
     margin: 60px auto; 
-
+    position: absolute;
     } 
     
     .grid img { 
     display:flex;  
-    margin: 2px; 
+    margin: 0;
     transform-style: preserve-3d; 
     transition: transform 0.5s; 
     } 
@@ -27,8 +34,8 @@
       display:none
     }
     /* .grid img.flip { 
-      transform: scaleX(-1);
-    }  */
+    transform: rotateY(180deg);  */
+    } 
     
     .popup { 
         position: fixed;
@@ -52,3 +59,5 @@
     color: rgb(144, 11, 206);
     font-size: 30px; 
     }
+
+   

@@ -98,17 +98,17 @@ let cardArray = [
     let secondCard = cardsId[1];
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
     alert("you have found a match"); 
-    source.src="click.wav"
-    audio.load()
-    audio.play()
+     
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
     setTimeout(checkWon,500) 
     } else { 
-    imgs[firstCard].setAttribute("src","princess cards.PNG" );
+    imgs[firstCard].setAttribute("src", "princess cards.PNG");
     imgs[secondCard].setAttribute("src", "princess cards.PNG"); alert("wrong, please try again"); 
-    imgs[firstCard].classList.remove("flip");
-    imgs[secondCard].classList.remove("flip"); 
+      source.src="click.wav"
+      audio.load()
+      audio.play()
+      imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip"); 
     } 
     cardsSelected = []; 
     cardsId = []; 
