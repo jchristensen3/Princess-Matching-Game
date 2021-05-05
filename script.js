@@ -25,13 +25,12 @@ let cardArray = [
     { name: "moana", img: "moana.PNG", }, 
     ]; 
     
-    //define variables and get DOM element
+    //Setting Variables
     
     let gameBoard= document.querySelector(".gameBoard");
-    let audio = document.querySelector("audio")
-    let source = document.querySelector("#source")
+    let audio = document.querySelector("audio");
+    let source = document.querySelector("#source");
     let scoreBoard = document.querySelector(".scoreBoard"); 
-    // let popup = document.querySelector(".popup"); 
     let playAgain = document.querySelector(".playAgain"); 
     let clickBoard = document.querySelector(".clickBoard"); 
     let imgs; 
@@ -41,11 +40,12 @@ let cardArray = [
     let clicks = 0;
     document.addEventListener("DOMContentLoaded", function () {
 
-    // Click replay popup
+    // Click replay 
 
     createBoard(gameBoard, cardArray); 
     arrangeCard();
     playAgain.addEventListener("click", replay); 
+
     
     // Click to flip card
     
@@ -58,7 +58,6 @@ let cardArray = [
     // Game board
     
     function createBoard(gameBoard, array) { 
-    // popup.style.display = "none"; 
     array.forEach((arr, index) => { 
     let img = document.createElement("img"); 
     img.setAttribute("src", "princess cards.PNG");
@@ -98,13 +97,12 @@ let cardArray = [
     let imgs = document.querySelectorAll(".gameBoard img"); 
     let firstCard = cardsId[0];
     let secondCard = cardsId[1];
-    console.log(firstCard)
-    console.log(secondCard)
+    
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
     alert("Good Job, you got a match!"); 
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,4000) 
+    setTimeout(checkWon,5000) 
     source.src="click.wav"
     audio.load()
     audio.play()
@@ -112,7 +110,8 @@ let cardArray = [
     else { 
     console.log(imgs)
     imgs[firstCard].setAttribute("src", "princess cards.PNG");
-    imgs[secondCard].setAttribute("src", "princess cards.PNG"); alert("Sorry, try again."); 
+    imgs[secondCard].setAttribute("src", "princess cards.PNG"); 
+   
     imgs[firstCard].classList.remove("flip"); 
     imgs[secondCard].classList.remove("flip");
   
@@ -123,26 +122,21 @@ let cardArray = [
     } 
     cardsSelected = []; 
     cardsId = []; 
-    clicks += 1; 
+    clicks += 2; 
     clickBoard.innerHTML = clicks; 
     }
     
     function checkWon() {
     if (cardsWon == cardArray.length / 2) {
-    alert("You won") 
-    // setTimeout(()=> popup.style.display = "flex" ,300); 
+    alert("You won")  
     }
     }
-    // The replay function
+    // Reload Game
     
     function replay() { 
-    arrangeCard(); 
-    gameBoard.innerHTML = "";
-    createBoard(gameBoard, cardArray);
-    cardsWon = 0;
-    clicks = 0; 
+
     window.location.reload();
-    clickBoard.innerHTML = 0; 
-    scoreBoard.innerHTML = 0; 
-    popup.style.display = "none"; 
+  
+
+ 
     }
