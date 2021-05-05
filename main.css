@@ -16,36 +16,40 @@
   }
 
   .gameBoard { 
-    padding-top: 100px;
+    padding-top: 60px;
+    padding-left: 55px;
+    padding-bottom: 60px;
     width: 100%;
     display: flex; 
     flex-wrap: wrap; 
     margin: 60px auto; 
     position: absolute;
+    
     } 
     
     .gameBoard img { 
-    display:flex;  
-    margin: 0;
+    display: Flex;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 200px;
+    width: 221.69px;
     transform-style: preserve-3d; 
-    transition: transform 0.2s; 
-    } 
-    .audio{
-      display:none
+    transition: transform 0.2s;
+    }
+  
+    .audio
+    {
+    display:none
     }
     
-    /* .flipCard {
-      transform: rotateY(180deg);
-    } */
-    
     .popup { 
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: white;
-        text-align: center;
-        font-size: 20px;  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;  
     }
     
     .data { 
@@ -60,5 +64,7 @@
     color: rgb(144, 11, 206);
     font-size: 30px; 
     }
+    
+  
 
    

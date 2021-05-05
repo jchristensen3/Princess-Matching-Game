@@ -87,7 +87,7 @@ let cardArray = [
     this.classList.add("flip"); 
     this.setAttribute("src", cardArray[selected].img); 
     if (cardsId.length === 2) { 
-    setTimeout(checkForMatch, 6000);
+    setTimeout(checkForMatch, 3000);
     } 
     }
     // checkForMatch function
@@ -102,7 +102,7 @@ let cardArray = [
     alert("Good Job, you got a match!"); 
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,5000) 
+    setTimeout(checkWon,3000) 
     } 
     else { 
       console.log(imgs)
