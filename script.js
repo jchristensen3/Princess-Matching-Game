@@ -1,7 +1,7 @@
 let cardArray = [ 
     { name: "snowwhite", img: "https://media.giphy.com/media/1u7OKD2p9ANAQ/giphy.gif", }, 
     { name: "snowwhite", img: "https://media.giphy.com/media/YFis3URdQJ6qA/giphy.gif", },
-    { name: "cinderella", img: "https://media.giphy.com/media/SHaQMBLjK6MvK/giphy.gif", },
+    { name: "cinderella", img: "https://media.giphy.com/media/f4cH0FXbUmogg/giphy.gif", },
     { name: "cinderella", img: "https://media.giphy.com/media/SHaQMBLjK6MvK/giphy.gif", }, 
     { name: "aurora", img: "https://media.giphy.com/media/uJh2K17LzvRPW/giphy.gif", },
     { name: "aurora", img: "https://media.giphy.com/media/YDH8Mf9bTBjgI/giphy.gif", }, 
@@ -89,7 +89,7 @@ let cardArray = [
     this.classList.add("flip"); 
     this.setAttribute("src", cardArray[selected].img); 
     if (cardsId.length === 2) { 
-    setTimeout(checkForMatch, 3000);
+    setTimeout(checkForMatch, 4000);
     } 
     }
     // Check for match
