@@ -29,10 +29,10 @@ Project-1
 
 
 
-
-
-
-
+Used to find out how to count my data. 
+https://www.codegrepper.com/code-examples/javascript/javascript+counting+when+clicking+a+button
+Used for Match Game Example
+https://codepen.io/brad4au57/pen/zLgJyj
 Alert information
 https://www.w3schools.com/jsref/met_win_alert.asp
 Used positioning
