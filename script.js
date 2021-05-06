@@ -26,19 +26,22 @@ let cardArray = [
     ]; 
     
     //Setting Variables
-    
-    let gameBoard= document.querySelector(".gameBoard");
-    let audio = document.querySelector("audio");
-    let source = document.querySelector("#source");
-    let scoreBoard = document.querySelector(".scoreBoard"); 
     let playAgain = document.querySelector(".playAgain"); 
+    let gameBoard= document.querySelector(".gameBoard");
     let clickBoard = document.querySelector(".clickBoard"); 
+    let scoreBoard = document.querySelector(".scoreBoard"); 
+    let source = document.querySelector("#source");
+    let audio = document.querySelector("audio");
+    
     let imgs; 
     let cardsId = []; 
     let cardsSelected = []; 
     let cardsWon = 0; 
     let clicks = 0;
-    document.addEventListener("DOMContentLoaded", function () {
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    });
 
     // Click replay 
 
@@ -51,9 +54,7 @@ let cardArray = [
     
     imgs = document.querySelectorAll("img");
     Array.from(imgs).forEach(img => 
-    img.addEventListener("click", flipCard)
-    ) 
-    });
+    img.addEventListener("click", flipCard)) 
 
     // Game board
     
@@ -88,7 +89,7 @@ let cardArray = [
     this.classList.add("flip"); 
     this.setAttribute("src", cardArray[selected].img); 
     if (cardsId.length === 2) { 
-    setTimeout(checkForMatch, 5000);
+    setTimeout(checkForMatch, 3000);
     } 
     }
     // Check for match
@@ -102,7 +103,7 @@ let cardArray = [
     alert("Good Job, you got a match!"); 
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,5000) 
+    setTimeout(checkWon,4000) 
     source.src="click.wav"
     audio.load()
     audio.play()
