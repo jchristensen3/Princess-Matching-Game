@@ -77,7 +77,7 @@ let cardArray = [
     
     function flipCard() { 
     let selected = this.dataset.id;
-      let clicked =cardArray[selected].name
+      let clicked =cardArray[selected].name;
     cardsSelected.push(clicked); 
      
     // Click Sound
