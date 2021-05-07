@@ -1,7 +1,26 @@
 # Princess-Matching-Game
-Project-1
+
+Project 1-Code for Good
+
+## Inroduction
+
+This is a simple card matching game using HTML, CSS, and Javascript. When clicking on two cards if you get a match the cards stay flipped and you receive an alert. If you do not get a match the cards flip back over. Each click is counted and your match score is provided. 
+ 
+
+### Requirements
+
+-Render in the browser
+-Include separate HTML / CSS / JavaScript files
+-Use Javascript for DOM manipulation
+-Use semantic markup for HTML and CSS (adhere to best practices)
+-Show a good commit history with frequent commits
+-KISS (Keep It Stupid Simple) and DRY (Don't Repeat    Yourself) principles.
 
 
+
+#### CSS Validation
+W3C CSS Validator results for https://jchristensen3.github.io/Princess-Matching-Game/ (CSS level 3 + SVG)
+Congratulations! No Error Found.
 
 
 
