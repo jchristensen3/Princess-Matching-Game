@@ -10,10 +10,15 @@ This is a simple card matching game using HTML, CSS, and Javascript. When clicki
 ### Requirements
 
 -Render in the browser
+
 -Include separate HTML / CSS / JavaScript files
+
 -Use Javascript for DOM manipulation
+
 -Use semantic markup for HTML and CSS (adhere to best practices)
+
 -Show a good commit history with frequent commits
+
 -KISS (Keep It Stupid Simple) and DRY (Don't Repeat    Yourself) principles.
 
 
