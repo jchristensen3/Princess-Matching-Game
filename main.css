@@ -1,4 +1,4 @@
-#bg {
+  #bg {
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -14,15 +14,16 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
   .WebContainer{
     width: 100%;
     height: auto;
-}
-.articles{
+  }
+  .articles{
     width:90%; /*Takes 90% width from WebContainer*/
     height: auto;
     margin: auto;
-} 
+  }
 
   .gameBoard { 
     padding-top: 60px;
@@ -32,9 +33,9 @@
     flex-wrap: wrap; 
     margin: 60px auto; 
     position: absolute;
-    } 
-    
-    .gameBoard img { 
+  } 
+
+  .gameBoard img { 
     display: Flex;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -42,13 +43,13 @@
     width: 221.69px;
     transform-style: preserve-3d; 
     transition: transform 0.2s;
-    }
-  
-    .audio {
+  }
+
+  .audio {
     display:none
-    }
-    
-    .playAgain { 
+  }
+
+  .playAgain { 
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -57,27 +58,27 @@
     color:mediumvioletred;
     font-size: 30px;  
     }
-    
-    .data{ 
+
+  .data{ 
     position: absolute;
     justify-content: space-between; 
     padding: 20px 30px; 
     font-size: 40px; 
     } 
-    
-    .data span { 
+
+  .data span { 
     position: absolute;
     color:mediumvioletred;
     font-size: 50px; 
     }
 
-   .carsGame {
+  .carsGame {
     position: absolute;
     top: 20px;
     padding-left: 1400px;
     height: 100px;
     width:150px;
-   }
+    }
 
   
     

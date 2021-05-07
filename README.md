@@ -22,27 +22,24 @@ This is a simple card matching game using HTML, CSS, and Javascript. When clicki
 W3C CSS Validator results for https://jchristensen3.github.io/Princess-Matching-Game/ (CSS level 3 + SVG)
 Congratulations! No Error Found.
 
+##### html Validation 
+The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
 
 
+##### Explanation
 
+I used a basic HTML layout including my header, body, divs and buttons calling my JS code. I included CSS for every ID, Class, and header that needed to be called. I then used javascript to do DOM manipulation. 
 
+I plan to work on the user experience of my page and move everything to the maximum screen size. I want to include more chalenges such as levels or letting the user pick the ammount of cards. I want to create my own pop up that goes away rather then the windows alert. I want to display animation when a match is found. 
 
+I plan to get the page to reset 
+I was able to get a popup but was not able to get it to timeout
+I plan to adjust the click wav. and freeze my cards so they can not be selected out of order. 
 
+I struggled with getting my cards to flip properly. 
+I included all images in my querySelector rather then just my board images which then called my backgroung image. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+I have had my children test and discovered many issues which I corrected such as the windows alert being very repetative and annoying. Other then freezing cards I am happy with the outcome and it filled my heart watching my kids play a game that created with many resources. 
 
 
 
