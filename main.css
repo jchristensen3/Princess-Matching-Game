@@ -15,25 +15,16 @@
     transform: translate(-50%, -50%);
   }
 
-  .WebContainer{
-    width: 100%;
-    height: auto;
-  }
-  .articles{
-    width:90%; /*Takes 90% width from WebContainer*/
-    height: auto;
-    margin: auto;
-  }
-
   .gameBoard { 
     padding-top: 60px;
-    padding-left: 30px;
+    padding-left: 200px;
     padding-bottom: 60px;
+    padding-right: 200px;
     display: flex; 
     flex-wrap: wrap; 
     margin: 60px auto; 
     position: absolute;
-  } 
+    } 
 
   .gameBoard img { 
     display: Flex;
@@ -72,14 +63,13 @@
     font-size: 50px; 
     }
 
-  .carsGame {
-    position: absolute;
-    top: 20px;
-    padding-left: 1400px;
-    height: 100px;
-    width:150px;
-    }
-
+    .carsGame {
+      position: absolute;
+      top: 20px;
+      padding-left: 1700px;
+      height: 100px;
+      width:150px;
+     }
   
     
   
