@@ -26,7 +26,7 @@ Congratulations! No Error Found.
 The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
 
 
-##### Explanation
+#### Explanation
 
 I used a basic HTML layout including my header, body, divs and buttons calling my JS code. I included CSS for every ID, Class, and header that needed to be called. I then used javascript to do DOM manipulation. 
 
@@ -42,7 +42,7 @@ I included all images in my querySelector rather then just my board images which
 I have had my children test and discovered many issues which I corrected such as the windows alert being very repetative and annoying. Other then freezing cards I am happy with the outcome and it filled my heart watching my kids play a game that created with many resources. 
 
 
-##### Resources
+#### Resources
 
 
 Used to find out how to count my data. 
