@@ -22,7 +22,7 @@ This is a simple card matching game using HTML, CSS, and Javascript. When clicki
 W3C CSS Validator results for https://jchristensen3.github.io/Princess-Matching-Game/ (CSS level 3 + SVG)
 Congratulations! No Error Found.
 
-##### html Validation 
+#### html Validation 
 The document is valid HTML5 + ARIA + SVG 1.1 + MathML 2.0 (subject to the utter previewness of this service).
 
 
@@ -42,7 +42,7 @@ I included all images in my querySelector rather then just my board images which
 I have had my children test and discovered many issues which I corrected such as the windows alert being very repetative and annoying. Other then freezing cards I am happy with the outcome and it filled my heart watching my kids play a game that created with many resources. 
 
 
-
+##### Resources
 
 
 Used to find out how to count my data. 
